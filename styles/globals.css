@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply w-full h-full bg-gray-900 text-white;
+}
+
+body div:only-child {
+    @apply w-full;
+}
