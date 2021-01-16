@@ -1,17 +1,23 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "plugin:prettier/react",
-    "plugin:prettier/@typescript-eslint"
-  ],
-  "plugins": ["@typescript-eslint", "react/recommended", "prettier"],
-  "rules": {
-    "react/react-in-jsx-scope": "off"
-  },
-  "globals": {
-    "React": "writable"
-  }
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": ["@typescript-eslint", "prettier"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "react/react-in-jsx-scope": "off"
+    },
+    "globals": {
+        "React": "writable"
+    }
 }
