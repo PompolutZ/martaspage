@@ -8,7 +8,6 @@ export default function Home() {
                 <img src="/hero-2.jpg" />
             </div>
             <div className="bg-gradient-to-b from-transparent to-gray-900 row-start-1 col-span-full"></div>
-
             <div className="row-start-1 col-span-full">
                 <ProjectsList />
             </div>
@@ -28,12 +27,12 @@ const plays: Play[] = [
         img: '/kuckel.jpg',
     },
     {
-        title: 'PÅ SPÅNING EFTER DEN TID SOM FLYTT',
-        img: '/pa_spaning.jpg',
+        title: 'HANSEL OCH GRETTEL',
+        img: '/hansel_och_gretel.jpeg',
     },
     {
-        title: 'JULIUS CESAR',
-        img: '/julius_cesar.jpg',
+        title: 'PÅ SPÅNING EFTER DEN TID SOM FLYTT',
+        img: '/pa_spaning.jpg',
     },
     {
         title: '1900',
@@ -44,8 +43,16 @@ const plays: Play[] = [
         img: '/kasta_loss.jpeg',
     },
     {
-        title: 'HANSEL OCH GRETTEL',
-        img: '/hansel_och_gretel.jpeg',
+        title: 'JULIUS CESAR',
+        img: '/julius_cesar.jpg',
+    },
+    {
+        title: 'Monster & Gudar',
+        img: '/monster_och_gudar.jpg',
+    },
+    {
+        title: 'Rannsakningen',
+        img: '/rannsakningen.jpg',
     },
 ];
 
@@ -54,14 +61,23 @@ function ProjectsList() {
 
     return (
         <Parallax ref={ref} pages={plays.length + 2}>
+            <ParallaxLayer>
+                <div className="w-full h-full flex items-center justify-center">
+                    <div className="font-allura text-9xl">Marta Khomenko</div>
+                </div>
+            </ParallaxLayer>
             {plays.map((play, index) => (
-                <ParallaxLayer
-                    key={play.title}
-                    offset={index + 1}
-                    className="flex items-center justify-center"
-                >
-                    <LayerContent url={play.img} title={play.title} />
-                </ParallaxLayer>
+                <div key={play.title}>
+                    <ParallaxLayer offset={index + 1} speed={0.01}>
+                        <div className="text-6xl">{play.title}</div>
+                    </ParallaxLayer>
+                    <ParallaxLayer
+                        offset={index + 1}
+                        className="flex items-center justify-center"
+                    >
+                        <LayerContent url={play.img} title={play.title} />
+                    </ParallaxLayer>
+                </div>
             ))}
         </Parallax>
     );
@@ -73,14 +89,14 @@ function LayerContent({ url, title }: { url: string; title: string }) {
             className="bg-white p-8 rounded-lg flex shadow-lg cursor-pointer group"
             style={{ width: '80vmin', height: '80vmin' }}
         >
-            <div className="flex-1 bg-black relative">
+            <div className="flex-1 bg-black relative overflow-hidden">
                 <div
-                    className="w-full h-full bg-cover bg-center flex group-hover:opacity-50 transition"
+                    className="w-full h-full bg-cover bg-center transform group-hover:scale-110 duration-500"
                     style={{ backgroundImage: `url(${url})` }}
                 ></div>
-                <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 text-9xl">
+                {/* <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 text-9xl">
                     {title}
-                </div>
+                </div> */}
             </div>
         </div>
     );

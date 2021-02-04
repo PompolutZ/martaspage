@@ -1,8 +1,21 @@
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-    return <Component {...pageProps} />;
+    return (
+        <>
+            <Head>
+                <link
+                    rel="preload"
+                    href="/fonts/Allura-Regular.ttf"
+                    as="font"
+                    crossOrigin=""
+                />
+            </Head>
+            <Component {...pageProps} />
+        </>
+    );
 }
 
 export default MyApp;
