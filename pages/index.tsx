@@ -90,7 +90,6 @@ function ProjectsList() {
                     </ParallaxLayer>
                     <ParallaxLayer
                         offset={index + 1}
-                        speed={-0.1}
                         className="flex items-center justify-center"
                     >
                         <section className="w-4/5vmin h-4/5vmin relative">
