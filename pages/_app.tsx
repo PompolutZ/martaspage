@@ -12,6 +12,12 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
                     as="font"
                     crossOrigin=""
                 />
+                <link
+                    rel="preload"
+                    href="/fonts/OpenSansCondensed-Bold.ttf"
+                    as="font"
+                    crossOrigin=""
+                />
             </Head>
             <Component {...pageProps} />
         </>

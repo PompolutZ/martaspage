@@ -10,10 +10,22 @@
     font-display: swap;
 }
 
+/* open-sans-condensed-700 - latin */
+@font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/open-sans-condensed-v15-latin-700.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
 body {
     @apply w-full h-full bg-gray-900 text-white;
 }
 
 .font-allura {
-    font-family: Allura, cursive;
+    font-family: 'Allura', cursive;
+}
+
+.font-open-sans-cond {
+    font-family: 'Open Sans Condensed', sans-serif;
 }
