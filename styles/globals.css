@@ -15,7 +15,7 @@
     font-family: 'Open Sans Condensed';
     font-style: normal;
     font-weight: 700;
-    src: url('/fonts/open-sans-condensed-v15-latin-700.ttf') format('truetype'); /* Safari, Android, iOS */
+    src: url('/fonts/OpenSansCondensed-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
 body {
