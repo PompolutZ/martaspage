@@ -71,7 +71,7 @@ function ProjectsList() {
     return (
         <Parallax ref={ref} pages={plays.length + 2}>
             <ParallaxLayer>
-                <div className="w-full h-full flex items-center justify-center flex-col">
+                <div className="w-full h-full flex items-center justify-center sm:justify-start pt-8 flex-col">
                     <h1 className="font-allura text-5xl sm:text-8xl lg:text-9xl">
                         Marta Khomenko
                     </h1>
@@ -83,13 +83,13 @@ function ProjectsList() {
             {plays.map((play, index) => (
                 <div key={play.title} className="group">
                     <ParallaxLayer
-                        offset={index + 1}
+                        offset={index + 0.7}
                         className="flex items-center justify-center"
                     >
                         <LayerContent url={play.img} title={play.title} />
                     </ParallaxLayer>
                     <ParallaxLayer
-                        offset={index + 1}
+                        offset={index + 0.7}
                         className="flex items-center justify-center"
                     >
                         <section className="w-4/5vmin h-4/5vmin relative">
