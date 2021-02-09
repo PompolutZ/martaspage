@@ -1,5 +1,6 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
     return (
@@ -19,7 +20,7 @@ type Play = {
     title: string;
     img: string;
     role: string;
-    source?: string;
+    url?: string;
 };
 
 const plays: Play[] = [
@@ -27,41 +28,50 @@ const plays: Play[] = [
         title: 'KUCKEL',
         img: '/kuckel.jpg',
         role: 'LJUSTEKNIKER',
+        url: 'http://orionteatern.se/arkivet/kuckel/',
     },
     {
         title: 'HANSEL OCH GRETTEL',
         img: '/hansel_och_gretel.jpeg',
         role: 'LJUSTEKNIKER',
+        url: 'http://orionteatern.se/arkivet/hans-och-greta/',
     },
     {
         title: 'PÅ SPÅNING EFTER DEN TID SOM FLYTT',
         img: '/pa_spaning.jpg',
         role: 'LJUSTEKNIKER',
+        url:
+            'http://orionteatern.se/arkivet/pa-spaning-efter-den-tid-som-flytt/',
     },
     {
         title: '1900',
         img: '/1900.jpg',
         role: 'LJUSTEKNIKER',
+        url: 'http://orionteatern.se/arkivet/1900/',
     },
     {
         title: 'KASTA LOSS',
         img: '/kasta_loss.jpg',
         role: 'LJUSMÄSTARE',
+        url: 'https://cirkusmania.se/program2020/kasta-loss/',
     },
     {
         title: 'JULIUS CESAR',
         img: '/julius_cesar.jpg',
         role: 'LJUSTEKNIKER',
+        url: 'http://orionteatern.se/arkivet/julius-caesar/',
     },
     {
         title: 'Monster & Gudar',
         img: '/monster_och_gudar.jpg',
         role: 'LJUSTEKNIKER',
+        url: 'http://orionteatern.se/arkivet/monster-gudar/',
     },
     {
         title: 'Rannsakningen',
         img: '/rannsakningen.jpg',
         role: 'LJUSTEKNIKER',
+        url: 'http://orionteatern.se/arkivet/rannsakningen/',
     },
 ];
 
@@ -86,13 +96,8 @@ function ProjectsList() {
                         offset={index + 0.7}
                         className="flex items-center justify-center"
                     >
-                        <LayerContent url={play.img} title={play.title} />
-                    </ParallaxLayer>
-                    <ParallaxLayer
-                        offset={index + 0.7}
-                        className="flex items-center justify-center"
-                    >
                         <section className="w-4/5vmin h-4/5vmin relative">
+                            <LayerContent img={play.img} url={play.url} />
                             <article className="absolute -mr-8 mb-12 right-0 bottom-0 bg-gray-800 p-8 rounded-md">
                                 <span className="inline-block text-white uppercase font-open-sans-cond">
                                     {play.title}
@@ -109,28 +114,24 @@ function ProjectsList() {
     );
 }
 
-function LayerContent({ url, title }: { url: string; title: string }) {
+function LayerContent({ url, img }: { img: string; url: string }) {
     return (
-        <div
-            className="bg-white p-2 md:p-4 lg:p-8 rounded-lg flex shadow-lg cursor-pointer w-4/5vmin h-4/5vmin"
-            // style={{ width: '80vmin', height: '80vmin' }}
-        >
-            <div className="flex-1 bg-black relative overflow-hidden">
-                <div
-                    className="w-full h-full bg-cover bg-center transform group-hover:scale-105 duration-500"
-                    style={{ backgroundImage: `url(${url})` }}
-                ></div>
-                <div
-                    className="absolute inset-0 w-full h-full bg-cover bg-center transform group-hover:scale-105 duration-500 group-hover:opacity-0"
-                    style={{
-                        backgroundImage: `url(${url})`,
-                        filter: 'grayscale(100%)',
-                    }}
-                ></div>
-                {/* <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 text-9xl">
-                    {title}
-                </div> */}
+        <Link href={url}>
+            <div className="bg-white p-2 md:p-4 lg:p-8 rounded-lg flex shadow-lg cursor-pointer w-4/5vmin h-4/5vmin">
+                <div className="flex-1 bg-black relative overflow-hidden">
+                    <div
+                        className="w-full h-full bg-cover bg-center transform group-hover:scale-105 duration-500"
+                        style={{ backgroundImage: `url(${img})` }}
+                    ></div>
+                    <div
+                        className="absolute inset-0 w-full h-full bg-cover bg-center transform group-hover:scale-105 duration-500 group-hover:opacity-0"
+                        style={{
+                            backgroundImage: `url(${img})`,
+                            filter: 'grayscale(100%)',
+                        }}
+                    ></div>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 }
