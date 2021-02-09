@@ -45,7 +45,7 @@ const plays: Play[] = [
     },
     {
         title: 'KASTA LOSS',
-        img: '/kasta_loss.jpeg',
+        img: '/kasta_loss.jpg',
         role: 'LJUSMÄSTARE',
     },
     {
