@@ -1,0 +1,58 @@
+[
+    {
+        "title": "KUCKEL",
+        "img": "/hero-2.jpg",
+        "role": "LJUSTEKNIKER",
+        "url": "http://orionteatern.se/arkivet/kuckel/",
+        "copyrights": "Marta Khomenko"
+    },
+    {
+        "title": "HANS OCH GRETA",
+        "img": "/hans_och_greta.jpeg",
+        "role": "LJUSTEKNIKER",
+        "url": "http://orionteatern.se/arkivet/hans-och-greta/",
+        "copyrights": "Jonas Jörneberg"
+    },
+    {
+        "title": "PÅ SPÅNING EFTER DEN TID SOM FLYTT",
+        "img": "/pa_spaning.jpg",
+        "role": "LJUSTEKNIKER",
+        "url": "http://orionteatern.se/arkivet/pa-spaning-efter-den-tid-som-flytt/",
+        "copyrights": "Jose Figueroa"
+    },
+    {
+        "title": "1900",
+        "img": "/1900.jpg",
+        "role": "LJUSTEKNIKER",
+        "url": "http://orionteatern.se/arkivet/1900/",
+        "copyrights": "Tom Jerry Boman"
+    },
+    {
+        "title": "KASTA LOSS",
+        "img": "/kasta_loss.jpg",
+        "role": "LJUSMÄSTARE",
+        "url": "https://cirkusmania.se/program2020/kasta-loss/",
+        "copyrights": ""
+    },
+    {
+        "title": "JULIUS CESAR",
+        "img": "/julius_cesar.jpg",
+        "role": "LJUSTEKNIKER",
+        "url": "http://orionteatern.se/arkivet/julius-caesar/",
+        "copyrights": "Jonas Jörneberg"
+    },
+    {
+        "title": "Monster & Gudar",
+        "img": "/monster_och_gudar.jpg",
+        "role": "LJUSTEKNIKER",
+        "url": "http://orionteatern.se/arkivet/monster-gudar/",
+        "copyrights": ""
+    },
+    {
+        "title": "Rannsakningen",
+        "img": "/rannsakningen.jpg",
+        "role": "LJUSTEKNIKER",
+        "url": "http://orionteatern.se/arkivet/rannsakningen/",
+        "copyrights": ""
+    }
+]
