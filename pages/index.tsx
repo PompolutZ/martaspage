@@ -3,6 +3,8 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { readFileSync } from 'fs';
+import ResponsiveImage from '../components/ResponsiveImage';
+import ResponsiveHeroImage from '../components/ResponsiveHeroImage';
 
 type Project = {
     title: string;
@@ -10,6 +12,7 @@ type Project = {
     role: string;
     url?: string;
     copyrights?: string;
+    description?: string;
 };
 
 type HomePageProps = {
@@ -22,7 +25,10 @@ export default function HomePage({ projects }: HomePageProps): React.ReactNode {
     return (
         <div className="grid grid-rows-1 grid-cols-1">
             <div className="bg-gray-900 row-start-1 col-span-full">
-                <img src="/hero-2.jpg" />
+                <ResponsiveHeroImage
+                    name="hero"
+                    alt="Kuckel's rehearsal, photograph by Marta Khomenko"
+                />
             </div>
             <div className="bg-gradient-to-b from-transparent to-gray-900 row-start-1 col-span-full"></div>
             <div className="row-start-1 col-span-full">
@@ -66,9 +72,9 @@ function ProjectsList({ projects }: ProjectListProps) {
                         offset={index + 0.7}
                         className="flex items-center justify-center"
                     >
-                        <section className="w-4/5vmin h-4/5vmin relative">
+                        <section className="w-4/5vmin h-4/5vmin relative text-sm sm:text-base">
                             <LayerContent {...play} />
-                            <article className="absolute -mr-8 mb-12 right-0 bottom-0 bg-gray-800 p-8 rounded-md">
+                            <article className="absolute -mr-8 mb-12 right-0 bottom-0 bg-gray-800 p-4 lg:p-8 rounded-md">
                                 <span className="inline-block text-white uppercase font-open-sans-cond">
                                     {play.title}
                                 </span>
@@ -84,9 +90,17 @@ function ProjectsList({ projects }: ProjectListProps) {
     );
 }
 
-type LayerContentProps = Pick<Project, 'img' | 'url' | 'copyrights'>;
+type LayerContentProps = Pick<
+    Project,
+    'img' | 'url' | 'copyrights' | 'description'
+>;
 
-function LayerContent({ url, img, copyrights }: LayerContentProps) {
+function LayerContent({
+    url,
+    img,
+    copyrights,
+    description,
+}: LayerContentProps) {
     return (
         <Link href={url}>
             <div className="bg-white p-2 md:p-4 lg:p-8 rounded-lg flex shadow-lg cursor-pointer w-4/5vmin h-4/5vmin">
@@ -96,17 +110,16 @@ function LayerContent({ url, img, copyrights }: LayerContentProps) {
                             &copy; {copyrights}
                         </small>
                     )}
-                    <div
-                        className="w-full h-full bg-cover bg-center transform group-hover:scale-105 duration-500"
-                        style={{ backgroundImage: `url(${img})` }}
-                    ></div>
-                    <div
-                        className="absolute inset-0 w-full h-full bg-cover bg-center transform group-hover:scale-105 duration-500 group-hover:opacity-0"
-                        style={{
-                            backgroundImage: `url(${img})`,
-                            filter: 'grayscale(100%)',
-                        }}
-                    ></div>
+                    <ResponsiveImage
+                        className="w-full transform group-hover:scale-105 duration-500"
+                        name={img}
+                        alt={description}
+                    />
+                    <ResponsiveImage
+                        className="group-hover:opacity-0 absolute inset-0 transform group-hover:scale-105 duration-500 grayscale"
+                        name={img}
+                        alt={description}
+                    />
                 </div>
             </div>
         </Link>

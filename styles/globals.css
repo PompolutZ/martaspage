@@ -30,3 +30,7 @@ body {
 .font-open-sans-cond {
     font-family: 'Open Sans Condensed', sans-serif;
 }
+
+.grayscale {
+    filter: grayscale(100%);
+}

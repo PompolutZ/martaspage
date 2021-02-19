@@ -1,58 +1,66 @@
 [
     {
         "title": "KUCKEL",
-        "img": "/hero-2.jpg",
+        "img": "kuckel",
         "role": "LJUSTEKNIKER",
         "url": "http://orionteatern.se/arkivet/kuckel/",
-        "copyrights": "Marta Khomenko"
+        "copyrights": "Marta Khomenko",
+        "description": "KUCKEL, photo by Marta Khomenko"
     },
     {
         "title": "HANS OCH GRETA",
-        "img": "/hans_och_greta.jpeg",
+        "img": "hans_och_greta",
         "role": "LJUSTEKNIKER",
         "url": "http://orionteatern.se/arkivet/hans-och-greta/",
-        "copyrights": "Jonas Jörneberg"
+        "copyrights": "Jonas Jörneberg",
+        "description": "HANS OCH GRETA, photo by Jonas Jörneberg"
     },
     {
         "title": "PÅ SPÅNING EFTER DEN TID SOM FLYTT",
-        "img": "/pa_spaning.jpg",
+        "img": "pa_spaning",
         "role": "LJUSTEKNIKER",
         "url": "http://orionteatern.se/arkivet/pa-spaning-efter-den-tid-som-flytt/",
-        "copyrights": "Jose Figueroa"
+        "copyrights": "Jose Figueroa",
+        "description": "PÅ SPÅNING EFTER DEN TID SOM FLYTT, photo by Jose Figueroa"
     },
     {
         "title": "1900",
-        "img": "/1900.jpg",
+        "img": "1900",
         "role": "LJUSTEKNIKER",
         "url": "http://orionteatern.se/arkivet/1900/",
-        "copyrights": "Tom Jerry Boman"
+        "copyrights": "Tom Jerry Boman",
+        "description": "1900, photo by Tom Jerry Boman"
     },
     {
         "title": "KASTA LOSS",
-        "img": "/kasta_loss.jpg",
+        "img": "kasta_loss",
         "role": "LJUSMÄSTARE",
         "url": "https://cirkusmania.se/program2020/kasta-loss/",
-        "copyrights": ""
+        "copyrights": "",
+        "description": "KASTA LOSS"
     },
     {
         "title": "JULIUS CESAR",
-        "img": "/julius_cesar.jpg",
+        "img": "julius_cesar",
         "role": "LJUSTEKNIKER",
         "url": "http://orionteatern.se/arkivet/julius-caesar/",
-        "copyrights": "Jonas Jörneberg"
+        "copyrights": "Jonas Jörneberg",
+        "description": "JULIUS CESAR, photo by Jonas Jörneberg"
     },
     {
         "title": "Monster & Gudar",
-        "img": "/monster_och_gudar.jpg",
+        "img": "monster_och_gudar",
         "role": "LJUSTEKNIKER",
         "url": "http://orionteatern.se/arkivet/monster-gudar/",
-        "copyrights": ""
+        "copyrights": "",
+        "description": "Monster & Gudar"
     },
     {
         "title": "Rannsakningen",
-        "img": "/rannsakningen.jpg",
+        "img": "rannsakningen",
         "role": "LJUSTEKNIKER",
         "url": "http://orionteatern.se/arkivet/rannsakningen/",
-        "copyrights": ""
+        "copyrights": "",
+        "description": "Rannsakningen"
     }
 ]
