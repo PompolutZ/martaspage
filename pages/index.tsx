@@ -26,6 +26,7 @@ export default function HomePage({ projects }: HomePageProps): React.ReactNode {
         <div className="grid grid-rows-1 grid-cols-1">
             <div className="bg-gray-900 row-start-1 col-span-full">
                 <ResponsiveHeroImage
+                    className="w-full"
                     name="hero"
                     alt="Kuckel's rehearsal, photograph by Marta Khomenko"
                 />
