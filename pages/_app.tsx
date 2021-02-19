@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
                     as="font"
                     crossOrigin=""
                 />
+                <title>Marta Khomenko - Lighting Designer</title>
             </Head>
             <Component {...pageProps} />
         </>
